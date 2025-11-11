@@ -109,3 +109,170 @@ body {
     font-size: 14px;
     margin-top: 20px;
 }
+
+/* ======= SOBRE NOSOTROS ======= */
+.section--wide {
+  max-width: 1100px;   /* más ancho que el resto para respirar mejor */
+}
+
+.section__header {
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #404040;      /* un pelín más suave que #333 */
+  margin-top: 8px;
+}
+
+.about__text {
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+
+/* Grid responsive: una columna en móvil, dos en pantallas medianas+ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+@media (min-width: 720px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* Tarjetas misión/visión */
+.about-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+}
+
+/* Acento superior sutil con el azul del logo */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: #5E8BFF; /* azul suave del logo */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.about-card__title {
+  color: #5E8BFF;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.about-card__body {
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ======= BENEFICIOS ======= */
+.benefits-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio uniforme entre los beneficios */
+}
+
+.benefits-list li {
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid #5E8BFF; /* Azul del logo */
+}
+
+/* En pantallas grandes: convertir la lista en dos columnas */
+@media (min-width: 720px) {
+  .benefits-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 18px;
+  }
+}
+/* ======= INTRODUCCIÓN + BENEFICIOS MITAD–MITAD ======= */
+.intro-benefits-container {
+  display: grid;
+  grid-template-columns: 1fr; /* en móvil */
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px; /* <-- da aire debajo del bloque de 2 columnas */
+}
+
+/* En PC → dos columnas 50 / 50 */
+@media (min-width: 820px) {
+  .intro-benefits-container {
+    grid-template-columns: 1fr 1fr; /* mitad y mitad */
+    align-items: stretch;
+  }
+}
+
+/* Para que cada bloque tenga la misma altura */
+.intro-benefits-container .section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Empuje extra para las secciones siguientes (opcional) */
+#materiales, #ventajas, #contacto {
+  margin-top: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ======= NUESTROS PRODUCTOS (versión con íconos) ======= */
+.np-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.np-list li {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  border-left: 4px solid #5E8BFF; /* toque azul */
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+/* Emoticones un poquito más grandes */
+.np-list li::first-letter {
+  font-size: 20px;
+}
+
+/* En pantallas grandes → dos columnas */
+@media (min-width: 720px) {
+  .np-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+  }
+}
