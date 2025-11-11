@@ -1,0 +1,111 @@
+/* ===================== RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F7DDE2; /* rosa pastel del logo */
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Nombre y slogan */
+.brand-name {
+    font-size: 28px;
+    color: #5E8BFF; /* azul del logo */
+    font-weight: bold;
+}
+
+.slogan {
+    font-size: 14px;
+    color: #333;
+    margin-top: -5px;
+}
+
+/* ===================== NAV ===================== */
+.nav {
+    background: #FFFFFF;
+    padding: 12px 0;
+    border-radius: 8px;
+    margin: 8px 0 20px 0;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #5E8BFF;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #3a5ccc;
+}
+
+/* ===================== SECCIONES ===================== */
+.section {
+    background: #FFFFFF;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.12);
+}
+
+.section h2 {
+    color: #5E8BFF;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.section p, 
+.section ul {
+    font-size: 16px;
+}
+
+.section ul {
+    margin-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 6px;
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #333;
+    font-size: 14px;
+    margin-top: 20px;
+}
