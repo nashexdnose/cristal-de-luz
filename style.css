@@ -276,3 +276,23 @@ body {
     gap: 16px 20px;
   }
 }
+
+/* ======= BANNER COMO IMAGEN ======= */
+.hero-img img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+/* Mantener proporción bonita en pantallas grandes */
+@media (min-width: 768px){
+  .hero-img{
+    margin: 8px 0 16px;
+  }
+  .hero-img img{
+    aspect-ratio: 16 / 5;     /* recorte suave tipo banner */
+    object-fit: cover;         /* llena sin deformar */
+  }
+}
