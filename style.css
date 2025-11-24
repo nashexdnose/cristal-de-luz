@@ -296,3 +296,37 @@ body {
     object-fit: cover;         /* llena sin deformar */
   }
 }
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #F5C8D4; /* rosa armónico con tu fondo */
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 12px 12px 0 0;
+}
+
+.footer h3 {
+    color: #4A7BFF; /* azul del logo */
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.footer-contact a {
+    display: block;
+    color: #4A7BFF; /* azul del logo */
+    font-size: 18px;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #2E5DE8; /* azul más fuerte */
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4A4A4A;
+}
