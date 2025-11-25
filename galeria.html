@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería – Cristal de Luz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="galeria-header">
+    <h1>Galería</h1>
+    <p>Nuestros diseños y creaciones</p>
+</header>
+
+<section class="galeria-grid">
+    <img src="img1.jpg" alt="Imagen 1">
+    <img src="img2.jpg" alt="Imagen 2">
+    <img src="img3.jpg" alt="Imagen 3">
+    <img src="img4.jpg" alt="Imagen 4">
+    <img src="img5.jpg" alt="Imagen 5">
+    <img src="img6.jpg" alt="Imagen 6">
+    <img src="img7.jpg" alt="Imagen 7">
+    <img src="img8.jpg" alt="Imagen 8">
+</section>
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<script>
+    const images = document.querySelectorAll('.galeria-grid img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    // Cerrar al hacer clic afuera
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = 'none';
+        }
+    });
+</script>
+
+
+</body>
+</html>
